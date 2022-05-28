@@ -1,0 +1,357 @@
+﻿<UserControl x:Class="Texteditor.Texteditor_.UserControl_Texteditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Texteditor.Texteditor_"
+             mc:Ignorable="d"  
+             d:DesignHeight="650" d:DesignWidth="780"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/" 
+             SizeChanged="Window_SizeChanged">
+
+    <UserControl.Resources>
+        <Style TargetType="MenuItem" x:Key="menuItemProperties">
+            <Setter Property="Background" Value="#ffffff"/>
+            <Setter Property="BorderBrush" Value="#ffffff"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style TargetType="Button" x:Key="buttonProperties">
+            <Setter Property="Background" Value="#e6e6e6"/>
+            <Setter Property="BorderBrush" Value="#e6e6e6"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" Name="rtbRow1"/>
+            <RowDefinition Height="30" x:Name="rtbRow2"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Name="mainMmenu" Padding="0 10" FontSize="14" Background="#e6f3ff">
+            <!--Datei-->
+            <MenuItem  Header="Datei">
+                <MenuItem Name="menuItemNew" Header="Neu" Click="New_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/new.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemNewWin" Header="Neues Fenster" Click="NewWindow_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/new-window.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemOpen" Header="Öffnen" Click="OpenFile_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/open.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemSpeichern" Header="Speichern" Click="SaveFile_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/save.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemSpUnter" Header="Speichern unter" Click="SaveAs_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/save_as.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemSpPdf" Header="Speichern als PDF" Click="SavePDF_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/savePDF.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemSpDB" Header="Speichern in DB" Click="SaveDB_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/database.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemSchließen" Header="Schließen" Click="Schließen_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/close.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator  Background="White" BorderBrush="White"/>
+                <MenuItem Name="menuItemDrucken" Header="Drucken" Click="Print_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/print.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem  Name="menuItemBeenden" Header="Beenden" Click="Beenden_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/exit.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--Einfügen-->
+            <MenuItem Header="Einfügen">
+                <MenuItem Header="Bilder" Name="menuItemImage" Click="InsertImage_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/image.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--Bearbeiten-->
+            <MenuItem Header="Bearbeiten" >
+                <MenuItem Name="menuItemCopy" Header="Kopieren" Click="Copy_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/copy.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemPaste" Header="Einfügen" Click="Paste_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/paste.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemCut" Header="Ausschneiden" Click="Cut_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/cut.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemRemove" Header="Löschen" Click="Löschen_Click"  Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/remove.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemUndo" Header="Rückgängig" Click="Undo_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/undo.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemRedo" Header="Wiederherstellen" Click="Redo_Click"  Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/redo.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemspeech" Header="Text to Speech" Click="Speech_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/speech.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemspeechStop" Header="Stop"  Click="SpeechStop_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/speech-stop.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemTime" Header="Datum/Uhrzeit" Click="Datum_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/time.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--Ansicht-->
+            <MenuItem Header="Ansicht">
+                <MenuItem Name="menuItemZoomIn" Header="Vergrößern" Click="ZoomIn_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/zoom-in.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemZoomOut" Header="Verkleinern" Click="ZoomOut_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/zoom-out.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemZoomStandard" Header="StandardZoom" Click="ZoomStandard_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/zoomStandard.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--About-->
+            <MenuItem Header="About" Margin="0 0 10 0" >
+                <MenuItem Name="menuItemGithub" Header="Code in GitHub" Click="About_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/github.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="menuItemContactus" Header="Kontakt uns" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/about-us.svg"/>
+                    </MenuItem.Icon>
+                    <MenuItem Width="270" Header="Khaledkalo17@gmail.com">
+                        <MenuItem.Icon>
+                            <svgc:SvgViewbox Source="/Images/email.svg"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Name="menuItemInfo" Header="Info" Click="Info_Click" Style="{StaticResource menuItemProperties}">
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox Source="/Images/about.svg"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--Schriftart, Schriftgrad-->
+            <ComboBox Name="comBoxFontFamily" SelectedIndex="5" IsEditable="True"
+                      SelectionChanged="CmbFontFamily_SelectionChanged" 
+                      Width="130" ToolTip="Schriftart ändern" 
+                      Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}">
+            </ComboBox>
+
+            <ComboBox Name="comBoxFontSize" SelectedIndex="4" IsEditable="True" 
+                      TextBoxBase.TextChanged="CmbFontSize_TextChanged"
+                      Width="55" ToolTip="Schriftgrad ändern" 
+                      Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}">
+            </ComboBox>
+
+            <Button x:Name="fontColor"     
+                    Click="FontColor_Click"
+                    ToolTip="Schriftfarbe"
+                    BorderBrush="#e6f3ff" 
+                    Background="#e6f3ff" 
+                    BorderThickness="0">
+                <svgc:SvgViewbox Width="22" Source="/Images/colorFont.svg" />
+            </Button>
+
+            <Button x:Name="backgroundColor"     
+                    Click="BackgroundColor_Click"
+                    ToolTip="Hintergrundfarbe"
+                    BorderBrush="#e6f3ff"  
+                    Background="#e6f3ff" 
+                    BorderThickness="0">
+                <svgc:SvgViewbox Width="15" Source="/Images/colorBack.svg" />
+            </Button>
+
+            <Label Name="lblDarkMode" Content="Dark Mode" Margin="0 0 -10 0"/>
+            <ToggleButton Checked="Toggle_Checked_Dark" Unchecked="Toggle_Unchecked_Light" Height="20" Width="42">
+                <ToggleButton.Template>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border x:Name="B1" Background="CornflowerBlue" CornerRadius="10" Padding="2">
+                            <Border x:Name="B2"  Background="White" Width="{TemplateBinding Height}"
+                                    CornerRadius="10" HorizontalAlignment="Left">
+                            </Border>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="B2" Property="HorizontalAlignment" Value="Right"/>
+                                <Setter TargetName="B1" Property="Background" Value="CornflowerBlue"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </ToggleButton.Template>
+            </ToggleButton>
+        </Menu>
+
+        <!--Second row-->
+        <WrapPanel Grid.Row="1" Name="wrapPanel_" Background="#e6e6e6">
+            <Button Click="New_Click" ToolTip="Neu" Margin="5 0 0 0" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/new.svg"  Height="15" Width="15" />
+            </Button>
+            <Button Click="OpenFile_Click" ToolTip="Öffnen" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/open.svg"  Height="15" Width="15" />
+            </Button>
+            <Button Click="SaveFile_Click" ToolTip="Speichern" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/save.svg"  Height="15" Width="15" />
+            </Button>
+
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <Button Click="Copy_Click" ToolTip="Kopieren" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/copy.svg" Height="15" Width="15"/>
+            </Button>
+            <Button Click="Paste_Click" ToolTip="Einfügen" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/paste.svg" Height="15" Width="15" />
+            </Button>
+            <Button Click="Cut_Click" ToolTip="Ausschneiden" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/cut.svg" Height="15" Width="15" />
+            </Button>
+            <Button Click="Undo_Click" ToolTip="Rückgängig" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/undo.svg" Height="15" Width="15"/>
+            </Button>
+            <Button Click="Redo_Click" ToolTip="Wiederholen" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/redo.svg" Height="15" Width="15"/>
+            </Button>
+
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+            <Button Click="Fett_Click"  ToolTip="Fett" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/fett.svg" Height="13" Width="13" />
+            </Button>
+            <Button Click="Italic_Click"  ToolTip="Kursiv" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/italic.svg" Height="15" Width="15" />
+            </Button>
+            <Button Click="Underline_Click" Margin="0 0 10 0" ToolTip="Unterstrichen" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/underline.svg" Height="15" Width="15" />
+            </Button>
+            <Button Click="ResetFormatting_Click" ToolTip="Formatierung löschen" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/clear-formatting.svg" Height="15" Width="15"/>
+            </Button>
+
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+            <Button Click="TexalligmentLeft_Click" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/textAlignment_left.svg" Height="15" Width="15" />
+            </Button>
+            <Button Click="TexalligmentCenter_Click" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/textAlignment_center.svg" Height="15" Width="15" />
+            </Button>
+            <Button Margin="0 0 25 0" Click="TexalligmentRight_Click" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/textAlignment_right.svg" Height="15" Width="15"/>
+            </Button>
+            <Button Width="40"  Click="AllZoomIn" ToolTip="Vergrößern" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/zoom-in.svg"  Height="19" Width="19" />
+            </Button>
+            <Button Width="40" Click="AllZoomout" ToolTip="Verkleinern" Style="{StaticResource buttonProperties}">
+                <svgc:SvgViewbox Source="/Images/zoom-out.svg" Height="21" Width="21" />
+            </Button>
+
+            <!--search-->
+            <TextBox Name="searchTextBox" 
+                     ToolTip="Nach Wörter Suchen"
+                     Width="80" Height="20" 
+                     Margin="20 0 0 0"/>
+            <Button Name="bnt_Search" Foreground="Blue" 
+                    Content="Suchen"
+                    Click="Search_Click"
+                    Width="50" Height="20"/>
+        </WrapPanel>
+
+        <ScrollViewer Grid.Row="2" >
+            <RichTextBox 
+                   x:Name="richtxtbox" 
+                   Block.LineHeight="2"                     
+                   Padding="2 5"
+                   SpellCheck.IsEnabled="True" 
+                   BorderThickness="0"
+                   SelectionChanged="SelectionChanged_Click">
+                <FlowDocument>
+                </FlowDocument>
+                <RichTextBox.LayoutTransform>
+                    <ScaleTransform 
+                        ScaleX="{Binding ElementName=Scale, Path=Value}" 
+                        ScaleY="{Binding ElementName=Scale, Path=Value}">
+                    </ScaleTransform>
+                </RichTextBox.LayoutTransform>
+            </RichTextBox>
+        </ScrollViewer>
+
+        <StatusBar Grid.Row="3" Name="stausbar1">
+            <StatusBarItem>
+                <TextBlock Text="Zeile 0, Spalte 0" Name="lblCursorPosition" Width="120" Padding="5 0"/>
+            </StatusBarItem>
+            <Separator Margin="5 0"/>
+            <StatusBarItem>
+                <TextBlock Text="Wörter 0" Name="countWörter" Width="90" Padding="5 0"/>
+            </StatusBarItem>
+            <StatusBarItem Width="100" HorizontalAlignment="Left">
+                <WrapPanel>
+                    <TextBox Text="{Binding Width}" Width="40" ToolTip="Width"/>
+                    <TextBlock Text=" x " />
+                    <TextBox Text="{Binding Height}" Width="40"  ToolTip="Height"/>
+                </WrapPanel>
+            </StatusBarItem>
+            <StatusBarItem Width="160">
+                <Slider x:Name="Scale" Minimum="1" Maximum="10" 
+                        TickFrequency="1"
+                        IsSnapToTickEnabled="True"
+                        Background="White" 
+                        Width="150"
+                        ToolTip="Zoom"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+
+</UserControl>
