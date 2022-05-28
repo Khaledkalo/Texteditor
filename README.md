@@ -7,4 +7,10 @@ Einige Funktionen, die der Texteditor bietet und die von Kunden unterschiedlich 
 
 
 
+## GUI
 
+### Texteditor
+![login image](https://github.com/Khaledkalo/Texteditor/blob/master/Dokumentation/README%20Image/Texteditor.png)
+
+### Zeichnen
+![login image](https://github.com/Khaledkalo/Texteditor/blob/master/Dokumentation/README%20Image/Zeichnen.png)
