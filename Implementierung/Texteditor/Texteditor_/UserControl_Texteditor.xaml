@@ -315,6 +315,7 @@
                    Block.LineHeight="2"                     
                    Padding="2 5"
                    SpellCheck.IsEnabled="True" 
+                   Language="de"
                    BorderThickness="0"
                    SelectionChanged="SelectionChanged_Click">
                 <FlowDocument>

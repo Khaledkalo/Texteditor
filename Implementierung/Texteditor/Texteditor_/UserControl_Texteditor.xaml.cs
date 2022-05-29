@@ -208,13 +208,13 @@ namespace Texteditor.Texteditor_
         {
             string richtextbox = new TextRange(richtxtbox.Document.ContentStart, richtxtbox.Document.ContentEnd).Text;
             string dbName = "Editor";
-            string connectionString = $@"Server=KALO\SQLEXPRESS; Database={dbName}; Trusted_Connection=True; MultipleActiveResultSets=True";
+            //string connectionString = $@"Server=KALO\SQLEXPRESS; Database={dbName};
+            //                          Trusted_Connection=True; MultipleActiveResultSets=True";
 
-            // ** connectionString für die Schule **
-            //string connectionString = $@"Server=localhost\;Initial Catalog={dbName};" +
-            //                          "User id=sa;" +
-            //                          "Password=mssqlserver;" +
-            //                          "MultipleActiveResultSets=True"; // Mehrere Abfragen gleichzeitig ermöglichen
+            string connectionString = $@"Server=localhost\;Initial Catalog={dbName};" +
+                                      "User id=sa;" +
+                                      "Password=mssqlserver;" +
+                                      "MultipleActiveResultSets=True";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -350,7 +350,6 @@ namespace Texteditor.Texteditor_
             reader.Dispose();
             string textSelected = richtxtbox.Selection.Text;
             string allText = new TextRange(richtxtbox.Document.ContentStart, richtxtbox.Document.ContentEnd).Text;
-            //var text = new TextRange(richtxtbox.Document.ContentStart, richtxtbox.Document.ContentEnd);
 
             if (allText == "")
             {
@@ -374,7 +373,6 @@ namespace Texteditor.Texteditor_
         {
             if (reader != null)
             {
-                //Disposes the SpeechSynthesizer object   
                 reader.Dispose();
                 menuItemspeech.IsEnabled = true;
                 menuItemspeechStop.IsEnabled = false;
@@ -421,7 +419,7 @@ namespace Texteditor.Texteditor_
         }
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://github.com/Khaledkalo/myEditor");
+            Process.Start("https://github.com/Khaledkalo/Texteditor");
         }
         private void Info_Click(object sender, RoutedEventArgs e)
         {
