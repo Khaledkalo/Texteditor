@@ -174,7 +174,7 @@ namespace Texteditor.Texteditor_
 
             if (saveFileDialog.ShowDialog() == true)
             {
-                FileStream fileStream = new FileStream(saveFileDialog.FileName, FileMode.CreateNew);
+                FileStream fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create);
                 TextRange range = new TextRange(richtxtbox.Document.ContentStart, richtxtbox.Document.ContentEnd);
                 range.Save(fileStream, DataFormats.Text);
             }
