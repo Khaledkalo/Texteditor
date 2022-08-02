@@ -208,8 +208,6 @@ namespace Texteditor.Texteditor_
         {
             string richtextbox = new TextRange(richtxtbox.Document.ContentStart, richtxtbox.Document.ContentEnd).Text;
             string dbName = "Editor";
-            //string connectionString = $@"Server=KALO\SQLEXPRESS; Database={dbName};
-            //                          Trusted_Connection=True; MultipleActiveResultSets=True";
 
             string connectionString = $@"Server=localhost\;Initial Catalog={dbName};" +
                                       "User id=sa;" +
@@ -646,8 +644,6 @@ namespace Texteditor.Texteditor_
                 }
             }
         }
-
-
 
         private void SelectionChanged_Click(object sender, RoutedEventArgs e)
         {
