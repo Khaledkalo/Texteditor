@@ -649,8 +649,6 @@ namespace Texteditor.Texteditor_
             }
         }
 
-
-
         private void SelectionChanged_Click(object sender, RoutedEventArgs e)
         {
             if (richtxtbox.Selection.Text != "")
@@ -712,7 +710,6 @@ namespace Texteditor.Texteditor_
             rtbRow1.Height = length;
             rtbRow2.Height = length;
         }
-
 
     }
 }

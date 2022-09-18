@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:Text="clr-namespace:Texteditor.Texteditor_"
         xmlns:Zeichnen="clr-namespace:Texteditor.Zeichnen_"
-        Title="My Editor" 
+        Title="Editor" 
         Height="650" 
         Width="780"
         MinWidth="338"
