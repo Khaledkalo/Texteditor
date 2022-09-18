@@ -210,12 +210,6 @@ namespace Texteditor.Texteditor_
             string dbName = "Editor";
             string connectionString = $@"Server=KALO\SQLEXPRESS; Database={dbName}; Trusted_Connection=True; MultipleActiveResultSets=True";
 
-            // ** connectionString für die Schule **
-            //string connectionString = $@"Server=localhost\;Initial Catalog={dbName};" +
-            //                          "User id=sa;" +
-            //                          "Password=mssqlserver;" +
-            //                          "MultipleActiveResultSets=True"; // Mehrere Abfragen gleichzeitig ermöglichen
-
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
