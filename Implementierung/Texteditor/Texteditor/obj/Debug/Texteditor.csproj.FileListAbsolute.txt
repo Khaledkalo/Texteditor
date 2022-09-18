@@ -41,3 +41,46 @@ E:\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.cs
 E:\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.csproj.CopyComplete
 E:\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.exe
 E:\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.pdb
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\Texteditor.exe.config
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\Texteditor.exe
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\Texteditor.pdb
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\BouncyCastle.Crypto.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\itextsharp.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Converters.Wpf.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Core.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Css.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Dom.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Model.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Rendering.Gdi.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Rendering.Wpf.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Runtime.Wpf.dll
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\itextsharp.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Converters.Wpf.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Core.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Css.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Dom.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Model.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Rendering.Gdi.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Rendering.Wpf.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\bin\Debug\SharpVectors.Runtime.Wpf.xml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.csproj.AssemblyReference.cache
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.csproj.SuggestedBindingRedirects.cache
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\MainWindow.g.cs
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor_\InfoWindow.g.cs
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor_\UserControl_Texteditor.g.cs
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Zeichnen_\UserControl_Zeichnen.g.cs
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\App.g.cs
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor_MarkupCompile.cache
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor_MarkupCompile.lref
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\MainWindow.baml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor_\InfoWindow.baml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor_\UserControl_Texteditor.baml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Zeichnen_\UserControl_Zeichnen.baml
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.g.resources
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.Properties.Resources.resources
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.csproj.GenerateResource.cache
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.csproj.CoreCompileInputs.cache
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.csproj.CopyComplete
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.exe
+E:\MyLernen\01. HBFS-WI\Hausarbeit\Hausarbeit\Texteditor_repo\Implementierung\Texteditor\Texteditor\obj\Debug\Texteditor.pdb

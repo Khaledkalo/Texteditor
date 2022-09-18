@@ -421,7 +421,7 @@ namespace Texteditor.Texteditor_
         }
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://github.com/Khaledkalo/myEditor");
+            Process.Start("https://github.com/Khaledkalo/Texteditor");
         }
         private void Info_Click(object sender, RoutedEventArgs e)
         {
